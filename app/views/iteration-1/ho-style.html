@@ -1,0 +1,108 @@
+
+{% extends "layout_ho.html" %}
+
+{% block pageTitle %}
+  Home – Highlight prototype
+{% endblock %}
+
+{% block content %}
+
+<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Comparing data in a table
+      </h1>
+
+      <h2 class="govuk-heading-m">Design notes</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          As formatted in Entity search, custom &ltstrong&gt tag
+        </li>
+        <li>
+          Colours as used in Entity search
+        </li>
+      </ul>
+
+
+    <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <table class="govuk-table" style="margin-bottom: 60px;">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col"  width="30%"></th>
+                      <th class="govuk-table__header" scope="col"  width="35%">Scanned from chip</th>
+                      <th class="govuk-table__header" scope="col"  width="35%">Scanned from MRZ</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Given names</th>
+                      <td class="govuk-table__cell">HARRY</td>
+                      <td class="govuk-table__cell">HARRY</td>
+                    </tr>
+                                        <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Surname</th>
+                      <td class="govuk-table__cell">POTTER</td>
+                      <td class="govuk-table__cell">POTTER</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Date of birth</th>
+                      <td class="govuk-table__cell">25/12/1985</td>
+                      <td class="govuk-table__cell">25/12/1985</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Country of nationality</th>
+                      <td class="govuk-table__cell">UKR</td>
+                      <td class="govuk-table__cell">UKR</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Document number</th>
+                      <td class="govuk-table__cell"><strong class="ho-highlight">HP369512</strong></td>
+                      <td class="govuk-table__cell"><strong class="ho-highlight">HP369412</strong></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Expiry date</th>
+                      <td class="govuk-table__cell">09/03/2024</td>
+                      <td class="govuk-table__cell">09/03/2024</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Document type</th>
+                      {% if (data['document-type'] == "brp") %}
+                      <td class="govuk-table__cell">BRP</td>
+                      <td class="govuk-table__cell">BRP</td>
+                      {% else %}
+                      <td class="govuk-table__cell">PASSPORT</td>
+                      <td class="govuk-table__cell">PASSPORT</td>
+                      {% endif %}
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">Country of issue</th>
+                      <td class="govuk-table__cell">UKR</td>
+                      <td class="govuk-table__cell">UKR</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__cell" scope="row">MRZ</th>
+                      <td class="govuk-table__cell monospace" style="font-size: 14px;">
+                        P&lt;NLDDE&lt;BRIJN&lt;&lt;WILLEKE&lt;LISELOTTE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>SPECI<span
+                          class="">1941</span>2NLD6503101F2403096999999990&lt;&lt;&lt;&lt;&lt;84</td>
+                      <td class="govuk-table__cell monospace" style="font-size: 14px;">
+                        P&lt;NLDDE&lt;BRIJN&lt;&lt;WILLEKE&lt;LISELOTTE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>SPECI20142NLD6503101F2403096999999990&lt;&lt;&lt;&lt;&lt;84</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+            </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
