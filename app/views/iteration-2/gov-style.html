@@ -1,32 +1,28 @@
 
-{% extends "layout_ho.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Home – Highlight prototype
 {% endblock %}
 
 {% block content %}
-
 <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
         Comparing data in a table
       </h1>
 
-      <h2 class="govuk-heading-m">Design notes</h2>
-
       <ul class="govuk-list govuk-list--bullet">
-        <li>
-          As formatted in Entity search, custom <code>&ltstrong&gt</code> tag
-        </li>
         <li>
           Colours as used in Entity search
         </li>
         <li>
-          Accessibility mark-up TBC
+          Formatted as custom <code>&ltmark&gt</code> tag with <code>aria-label</code>
         </li>
       </ul>
+
 
 
     <div class="govuk-grid-row">
@@ -62,8 +58,8 @@
                     </tr>
                     <tr class="govuk-table__row">
                       <th class="govuk-table__cell" scope="row">Document number</th>
-                      <td class="govuk-table__cell"><strong class="ho-highlight">HP369512</strong></td>
-                      <td class="govuk-table__cell"><strong class="ho-highlight">HP369412</strong></td>
+                      <td class="govuk-table__cell"><strong><mark class="ho-highlight" aria-label="highlighted text">HP369512</mark></strong></td>
+                      <td class="govuk-table__cell"><strong><mark class="ho-highlight" aria-label="highlighted text">HP369412</mark></strong></td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th class="govuk-table__cell" scope="row">Expiry date</th>
