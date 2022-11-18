@@ -1,0 +1,123 @@
+
+{% extends "layout_ho.html" %}
+
+{% block pageTitle %}
+  Home – Highlight prototype
+{% endblock %}
+
+{% block content %}
+
+<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find a person
+      </h1>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full-name">
+          Full name
+        </label>
+        <input class="govuk-input govuk-input--width-20 id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+      </div>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+          <label class="govuk-label" for="date-of-birth">
+            Date of birth
+          </label>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full-name">
+          Country of nationality
+        </label>
+        <input class="govuk-input govuk-input--width-20 id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+      </div>
+
+
+      <div class="govuk-form-group" style="margin-bottom:50px">
+  <fieldset class="govuk-fieldset" aria-describedby="status-hint">
+    <legend class="govuk-fieldset__legend">
+      Application status
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="submitted">
+        <label class="govuk-label govuk-checkboxes__label" for="status">
+          Submitted
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="granted">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Granted
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="refused">
+        <label class="govuk-label govuk-checkboxes__label" for="status-3">
+          Refused
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="status-4" name="status" type="checkbox" value="withdrawn">
+        <label class="govuk-label govuk-checkboxes__label" for="status-4">
+          Withdrawn
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+<div class="govuk-button-group">
+  <a href="search-results" class="govuk-button" data-module="govuk-button">
+    Search
+  </a>
+
+  <a class="govuk-link" href="#">Clear filters</a>
+</div>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

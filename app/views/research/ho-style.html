@@ -1,18 +1,20 @@
 
-{% extends "layout.html" %}
+{% extends "layout_ho.html" %}
 
 {% block pageTitle %}
   Home – Highlight prototype
 {% endblock %}
 
 {% block content %}
-<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
 
+<a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
         Comparing data in a table
       </h1>
+
+      <h2 class="govuk-heading-m">Design notes</h2>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
@@ -22,7 +24,6 @@
           Formatted as custom <code>&ltmark&gt</code> tag, with start and end classes in CSS
         </li>
       </ul>
-
 
 
     <div class="govuk-grid-row">
@@ -92,46 +93,6 @@
                   </tbody>
                 </table>
 
-                <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Where did you used to live?
-      </h1>
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          England
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          Scotland
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-          Wales
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-          Northern Ireland
-        </label>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-                <button class="govuk-button" data-module="govuk-button">
-                  Submit
-                </button>
 
               </div>
             </div>
