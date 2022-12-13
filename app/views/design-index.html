@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – Highlight prototype
+{% endblock %}
+
+{% block content %}
+  <a href="#1" onClick="history.go(-1); return false;" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Highlighting important information
+      </h1>
+      <h2 class="govuk-heading-m">Iteration 1 - Entity search design</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="iteration-1/ho-style">Home Office page style</a>
+        </li>
+        <li>
+          <a href="iteration-1/gov-style">GOV.UK page style</a>
+        </li>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">Iteration 2 - adding accessible semantics</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="iteration-2/ho-style">Home Office page style</a>
+        </li>
+        <li>
+          <a href="iteration-2/gov-style">GOV.UK page style</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
